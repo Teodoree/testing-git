@@ -1,12 +1,18 @@
-const splide = new Splide( '.splide', {
-  type   : 'loop'
-  drag   : 'free'
-  focus  : 'center'
-  perPage: 3,
-  arrows: false,
-  autoScroll: {
-    speed: 1,
-  },
-} );
+const numberOfFilms = prompt('Сколько фильмов вы посмотрели?', '');
 
-splide.mount(window.splide.Extensions);
+const personalMoviDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
+
+const a = prompt('Один из последних просмотренных фильмов?', ''),
+    b = prompt('На сколько оцените его?', ''),
+    c = prompt('Один из последних просмотренных фильмов?', ''),
+    d = prompt('На сколько оцените его?', '');
+personalMoviDB.movies[a] = b;
+personalMoviDB.movies[c] = d;
+
+console.log(personalMoviDB);
